@@ -6,10 +6,20 @@
     */
 
     //ENTRADA
-
+    const numero = Number(prompt(`Informe um número inteiro:`));
     
     //PROCESSAMENTO
-
+    switch (numero % 2) {
+        case 0:
+            alert(`Par!`);
+            break;
+        case 1:
+            alert(`Ímpar!`);
+            break;
+        default: 
+            alert(`Valor inválido.`);
+            break;
+    }
     
     //SAÍDA
 
