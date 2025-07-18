@@ -14,8 +14,48 @@
     const operacao = prompt(`Informe qual operação você deseja realizar: ( A - adição | S - subtração | D - divisão | M - multiplicação)`).toUpperCase().trim();
 
     //PROCESSAMENTO
+    let resultado = 0;
+    let mensagem = "";
+    switch (operacao) {
+        case "A":
+            resultado = num1 + num2;
+            break;
+        case "S":
+            resultado = num1 - num2;
+            break;
+        case "M":
+            resultado = num1 * num2;
+            break;
+        case "D":
+            resultado = num1 / num2;
+            break;
+    }
+    mensagem = `O resultado da operação é ${resultado}. `;
+    switch (resultado % 2) {
+        case 0:
+            mensagem = mensagem + `Este número é par. `;
+            break;
+        default:
+            mensagem = mensagem + `Este número é ímpar. `;
+            break;
+    }
+    switch (resultado > 0) {
+        case true:
+            mensagem += `O número é positivo. `;
+            break;
+        case false:
+            mensagem += `O número é negativo. `;
+            break;
+    }
+    switch (Number.isInteger(resultado)) {
+        case true:
+            mensagem += `Também é um número inteiro.`;
+            break;
+        case false:
+            mensagem += `Também é um número decimal.`;
+            break;
+    }
 
-    
     //SAÍDA
-
+    alert(mensagem);
 </script>

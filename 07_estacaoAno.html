@@ -7,10 +7,77 @@
     */
 
     //ENTRADA
-
+    const hemisferio = prompt(`Informe qual hemisfério você está: (N - norte | S - sul) `).toUpperCase().trim();
+    const mes = Number(prompt(`Agora informe qual o mês atual: (em números) `));
     
     //PROCESSAMENTO
+    switch(hemisferio){
+        case "N":
+            switch(mes){
+                case 12:
+                case 1:
+                case 2:
+                    alert("A estação do ano é Inverno.");
+                    break;
 
+                case 3:
+                case 4:
+                case 5:
+                    alert("A estação do ano é Primavera.");
+                    break;
+                
+                case 6:
+                case 7:
+                case 8:
+                    alert("A estação do ano é Verão.");
+                    break;
+                
+                case 9:
+                case 10:
+                case 11:
+                    alert("A estação do ano é Outono.");
+                    break;
+                
+                default:
+                    alert("Número do mês inválido.");
+                    break;
+            }
+        case "S":
+            switch(mes){
+                case 12:
+                case 1:
+                case 2:
+                    alert("A estação do ano é Verão.");
+                    break;
+
+                case 3:
+                case 4:
+                case 5:
+                    alert("A estação do ano é Outono.");
+                    break;
+
+                case 6:
+                case 7:
+                case 8:
+                    alert("A estação do ano é Inverno.");
+                    break;
+                
+                case 9:
+                case 10:
+                case 11:
+                    alert("A estação do ano é Primavera.");
+                    break;
+                
+                default:
+                    alert("Número do mês inválido.");
+                    break;
+            }
+        
+        default:
+            alert(`Valores inválidos.`);
+            break;
+        
+    }
 
     //SAÍDA
 

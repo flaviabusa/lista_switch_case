@@ -10,10 +10,30 @@
     */
 
     // ENTRADA
-
+    const idadeCao = Number(prompt(`Informe a idade do seu cão:`));
+    const porte = prompt(`Informe o porte do seu cão: ( P - pequeno, M - médio, G - grande )`).toUpperCase().trim();
     
     // PROCESSAMENTO
+    switch (porte) {
+        case "P":
+            const fator5 = idadeCao * 5;
+            alert(`A idade do seu cão de acordo com seu porte é de ${fator5} anos.`);
+            break;
+        
+        case "M":
+            const fator6 = idadeCao * 6;
+            alert(`A idade do seu cão de acordo com seu porte é de ${fator6} anos.`);
+            break;
 
+        case "G":
+            const fator7 = idadeCao * 7;
+            alert(`A idade do seu cão de acordo com seu porte é de ${fator7} anos.`);
+            break;
+
+        default:
+            alert(`Valor inválido.`);
+            break;
+    }
     
     // SAÍDA
 
